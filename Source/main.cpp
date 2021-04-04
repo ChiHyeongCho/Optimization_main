@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <ctime>
-#include <ilcp/cp.h>
+#include "Global.h"
 
 using namespace std;
 
@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) // argc : 인자수,  argv : 해당경로/파일명
 	string argvOne = directory + "example.csv";
 
 	// Frist : Read data from the directory -> DataManager 객체
+
 
 	DataManager* dm = new DataManager(env, directory);
 	dm->ReadData(argvOne);
