@@ -9,11 +9,10 @@
 
 //--------------------------------------------------------------------------------------------------------------
 
-#include <iostream>
-#include <ctime>
 #include "Global.h"
+#include "DataManager.h"
+#include "Optimizer.h"
 
-using namespace std;
 
 int main(int argc, char* argv[]) // argc : 인자수,  argv : 해당경로/파일명
 {

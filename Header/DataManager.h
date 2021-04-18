@@ -11,7 +11,7 @@
 
 #include "Global.h"
 
-class DataManger {
+class DataManager {
 
 	// 맴버변수
 private:
@@ -32,11 +32,11 @@ private:
 public:
 
 	// 생성자
-	DataManger(IloEnv& env, string& dir);
-	~DataManger();
+	DataManager(IloEnv& env, string& dir);
+	~DataManager();
 
 	// 로그 및 경로 Getter 함수
-	fstream GetLogOut() const;
+	fstream* GetLogOut() const;
 	string GetDir() const;
 
 	// Input Getter 함수

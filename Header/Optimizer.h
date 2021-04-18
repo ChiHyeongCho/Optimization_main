@@ -11,16 +11,23 @@
 //--------------------------------------------------------------------------------------------------------------
 
 #include "Global.h"
+#include "DataManager.h"
 
-class Opitimizer
+class Optimizer
 {
 
-	// 맴버함수
+	// 맴버변수
 private:
 
 	// CPELX 변수
 	IloEnv env_;
 	IloModel model_;
+
+	// DataManager 객체 저장
+	DataManager* optimizerData_;
+
+	// Log 관리
+	fstream* log_;
 
 	// 목적함수
 	IloObjective objective;
@@ -31,8 +38,8 @@ private:
 public:
 
 	// 생성자
-	Opitimizer(DataManager* dm, IloEnv& env);
-	~Opitimizer();
+	Optimizer(DataManager* dm, IloEnv& env);
+	~Optimizer();
 
 	// Getter 함수
 	DataManager* GetDataManager();

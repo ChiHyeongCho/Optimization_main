@@ -3,7 +3,7 @@
 
 // »ı¼ºÀÚ
 
-DataManger::DataManger(IloEnv& env, string& dir)
+DataManager::DataManager(IloEnv& env, string& dir)
 {
 
 	env_ = env;
@@ -16,5 +16,3 @@ DataManger::DataManger(IloEnv& env, string& dir)
 	inputMap_.clear();
 
 };
-
-DataManger::~DataManger()
