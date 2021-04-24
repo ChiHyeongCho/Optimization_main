@@ -24,13 +24,13 @@ private:
 	IloModel model_;
 
 	// DataManager 객체 저장
-	DataManager* optimizerData_;
+	DataManager* optimizer_data_;
 
 	// Log 관리
 	fstream* log_;
 
 	// 목적함수
-	IloObjective objective;
+	IloObjective objective_;
 
 	// 결정변수 ( LP/MIP 등 최적화 문제 종류에 따라 적합한 Type 선택 ) 
 	IloArray<IloBoolVarArray> matrixVar_;
@@ -44,7 +44,6 @@ public:
 	// Getter 함수
 	DataManager* GetDataManager();
 
-
 	// 맴버 함수
 
 	// 전처리
@@ -53,11 +52,14 @@ public:
 	// 최적화
 	bool Optimizing();
 
-	// 변수선언 및 초기화
-	bool Initializing();
+	// 변수 생성
+	bool MakingVar();
 
-	// 목적함수 및 제약조건 설정
-	bool CreateModel();
+	// 목적함수 생성
+	bool MakingObj();
+
+	// 제약조건 생성
+	bool MakingConstraint();
 
 	// 문제풀이
 	bool SolveModel();
